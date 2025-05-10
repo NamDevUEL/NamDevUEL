@@ -25,3 +25,5 @@
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=namdevuel&show_icons=true&locale=en" alt="namdevuel" /></p>
 
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=namdevuel&" alt="namdevuel" /></p>
+
+![Snake animation](https://github.com/thepiyushmalhotra/thepiyushmalhotra/blob/output/github-contribution-grid-snake.svg)
