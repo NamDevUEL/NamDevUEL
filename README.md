@@ -11,6 +11,13 @@
 
 - 📫 How to reach me **namhpmk24419@st.uel.edu.vn**
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/NamDevUEL/NamDevUEL/github-breakout/images/breakout-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/NamDevUEL/NamDevUEL/github-breakout/images/breakout-light.svg" />
+  <img alt="Breakout Game" src="https://raw.githubusercontent.com/NamDevUEL/NamDevUEL/github-breakout/images/breakout-light.svg" />
+</picture>
+
+
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://kaggle.com/namminh" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/kaggle.svg" alt="namminh" height="30" width="40" /></a>
