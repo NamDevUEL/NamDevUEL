@@ -1,0 +1,49 @@
+name: Generate breakout svg
+
+on:
+  schedule:
+    - cron: "0 0 * * *"      # chạy mỗi ngày lúc 00:00 UTC (chỉnh nếu muốn)
+  workflow_dispatch:
+
+jobs:
+  generate-svg:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate SVGs
+        uses: cyprieng/github-breakout@v1
+        with:
+          github_username: ${{ github.repository_owner }}
+          # github_token: ${{ secrets.GITHUB_TOKEN }}   # optional, default is action token
+          # enable_ghost_bricks: true
+          # paddle_color: "#006064"
+          # ball_color: "#006064"
+          # bricks_colors: "#e0f7fa,#b2ebf2,#4dd0e1,#0097a7,#006064"
+
+      - name: Move generated SVGs to temp
+        run: |
+          mkdir -p /tmp/breakout-images
+          mv output/light.svg /tmp/breakout-images/breakout-light.svg || true
+          mv output/dark.svg /tmp/breakout-images/breakout-dark.svg || true
+          mv output/custom.svg /tmp/breakout-images/breakout-custom.svg || true
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit and push SVGs to target branch
+        run: |
+          git checkout --orphan github-breakout
+          git rm -rf .
+          mkdir -p images
+          mv /tmp/breakout-images/* images/ || true
+          git add images || true
+          git commit -m "chore: update GitHub breakout SVGs" || echo "No changes to commit"
+          git push --force origin github-breakout
