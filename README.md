@@ -1,5 +1,6 @@
 <h1 align="center">Hi 👋, I'm Haku</h1>
-```json
+
+<pre>```json
 {
   "job": "Student",
   "birthday": "2006-11-26",
@@ -8,7 +9,7 @@
   "stack": ["SQL", "Python", "Power BI", "Stata", "..."],
   "interest": ["Tech", "Gaming", "Statistics", "Models", "..."]
 }
-```
+```</pre>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=namdevuel&label=Profile%20views&color=0e75b6&style=flat" alt="namdevuel" /> </p>
 
